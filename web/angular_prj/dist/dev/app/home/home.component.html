@@ -1,0 +1,43 @@
+<h2 *ngIf="!userName" class="text-center">Приветствуем! Пожалуйста, введите ваше имя.</h2>
+<h2 *ngIf="userName" class="text-center">Привет, {{ userName }}!</h2>
+
+<div *ngIf="userName" class="points">
+    <span>Баллы:</span>
+    <span>{{ userPoints }}</span>
+</div>
+
+<div *ngIf="userName" class="errors">
+    <span>Ошибки:</span>
+    <span>{{ errorsCount }}</span>
+</div>
+
+<div *ngIf="startTestFlag" class="test">
+    <h3 class="text-center">
+        Выберите перевод для слова <span class="word">{{ words.word }}</span>
+    </h3>
+    <div *ngIf="tryFlag" class="text-center">Неверно! Попробуйте еще раз.</div>
+    <div class="variants text-center">
+        <button (click)="selectChoice($event)" *ngFor="let word of choices" type="button" class="btn btn-info" [attr.value]="word.id">{{ word.word }}</button>
+    </div>
+</div>
+
+<div *ngIf="endTestFlag" class="text-center">
+    <h3>Тест закончен. Вы набрали {{ userPoints }} баллов.</h3>
+</div>
+
+<div class="text-center">
+    <form *ngIf="!userName" (submit)="setUserName()" class="form-inline">
+        <div class="form-group">
+            <input class="form-control" [(ngModel)]="newName" name="newName" placeholder="Ваше имя">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default" type="submit">Начать тест!</button>
+        </div>
+    </form>
+</div>
+
+
+
+<ul>
+    <li *ngFor="let name of names">{{name}}</li>
+</ul>
