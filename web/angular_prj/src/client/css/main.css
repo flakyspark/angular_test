@@ -1,0 +1,17 @@
+.points {
+    float: left;
+    color: green;
+}
+
+.errors {
+    float: right;
+    color: red;
+}
+
+.test .word {
+    color: blue;
+}
+
+.test .variants button {
+    margin-left: 8px;
+}

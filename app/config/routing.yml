@@ -1,0 +1,9 @@
+app:
+    resource: "@TestBundle/Controller/"
+    type:     annotation
+
+default_homepage:
+    path:  /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /angular_prj/dist/dev/index.html
