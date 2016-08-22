@@ -22,7 +22,7 @@ class TestController extends Controller
 {
 
     /**
-     * Get file from ftp backup
+     * Сброс информаци пользователя
      *
      * @Route("/reset_user", name="reset_user")
      * @Method("GET")
@@ -39,7 +39,7 @@ class TestController extends Controller
     }
 
     /**
-     * Get file from ftp backup
+     * Получение набора слов
      *
      * @Route("/getwords", name="getwords")
      * @Method("GET")
@@ -83,7 +83,7 @@ class TestController extends Controller
     }
 
     /**
-     * Update error stats
+     * Засчитать ошибку
      *
      * @Route("/add_error", name="add_error")
      * @Method("POST")
@@ -123,7 +123,7 @@ class TestController extends Controller
     }
 
     /**
-     * Update user stats
+     * Обновление статистики пользователей
      *
      * @Route("/add_result", name="add_result")
      * @Method("POST")
